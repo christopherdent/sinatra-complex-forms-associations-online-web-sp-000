@@ -3,6 +3,8 @@ class OwnersController < ApplicationController
   get "/" do 
     erb :'/owners/index'
   
+ 
+
   get '/owners' do
     @owners = Owner.all
     erb :'/owners/index'
@@ -46,6 +48,5 @@ class OwnersController < ApplicationController
       end
       redirect "owners/#{@owner.id}"
   end
-
 end 
  
