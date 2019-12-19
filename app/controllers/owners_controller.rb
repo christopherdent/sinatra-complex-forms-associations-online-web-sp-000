@@ -2,7 +2,7 @@ class OwnersController < ApplicationController
 
   get "/" do 
     erb :'/owners/index'
-  
+  end
  
 
   get '/owners' do
