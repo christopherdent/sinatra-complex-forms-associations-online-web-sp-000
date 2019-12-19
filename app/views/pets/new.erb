@@ -13,13 +13,12 @@
 
  
 
-  <h3>Existing Owners</h3>
-  <% @owners.each do |o| %>
-    <input type="radio" name="owner[owner_ids][]" id="<%= o.id %>" value="<%= o.id %>"><%= o.name %></input><br>
- 
-    
-  <% end %>
-  <br>
+<h3>Existing Owners</h3>
+    <% @owners.each do |owner| %>
+      <input type="radio" name="owner[owner_ids][]" id="<%= owner.id %>" value="<%= owner.id %>"><%= owner.name %></input>
+      <br>
+    <% end %>
+    <br>
 
   <h3>Or Create New Person</h3>
   <label>OWNER Name: </label>
