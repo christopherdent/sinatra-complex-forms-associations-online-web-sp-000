@@ -38,8 +38,6 @@ class PetsController < ApplicationController
     erb :'/pets/show'
   end
   
-  
-  
 
   patch '/pets/:id' do 
     @owners = Owner.all
