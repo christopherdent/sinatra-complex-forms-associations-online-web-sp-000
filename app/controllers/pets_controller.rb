@@ -25,8 +25,6 @@ class PetsController < ApplicationController
   end
   
   
- 
-  
    get '/pets/:id/edit' do 
      
     @owners = Owner.all
