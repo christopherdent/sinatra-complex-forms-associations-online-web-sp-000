@@ -46,7 +46,6 @@ class PetsController < ApplicationController
   
 
 
-
   patch '/pets/:id' do 
     @owners = Owner.all
     if !params[:pet].keys.include?("owner_ids")
