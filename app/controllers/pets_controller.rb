@@ -24,7 +24,12 @@ class PetsController < ApplicationController
   end
   
   
-
+ get '/pets/:id' do 
+    @owners = Owner.all 
+    @pet = Pet.find(params[:id])
+    erb :'/pets/show'
+  end
+  
 
 
    get '/pets/:id/edit' do 
@@ -38,12 +43,7 @@ class PetsController < ApplicationController
 
 
  
-  get '/pets/:id' do 
-    @owners = Owner.all 
-    @pet = Pet.find(params[:id])
-    erb :'/pets/show'
-  end
-  
+ 
 
 
   patch '/pets/:id' do 
