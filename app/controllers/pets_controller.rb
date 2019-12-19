@@ -30,9 +30,10 @@ class PetsController < ApplicationController
 
 
    get '/pets/:id/edit' do 
-     binding.pry
-    @owners = Owner.all
+         @owners = Owner.all
     @pet = Pet.find(params[:id])
+     binding.pry
+  
     erb :'/pets/edit'
   end
 
