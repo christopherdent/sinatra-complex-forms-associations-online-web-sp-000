@@ -21,7 +21,10 @@
     <h3>Existing OWNERS</h3>
    
       <% Owner.all.each do |o| %>
-    <input type="radio" name="owner[owner_ids][]" id="<%= o.id %>" value="<%= o.id %>"><%= o.name %>" <%='checked' if @pet.owners.include?(owner) %>><%= owner.name %></input><br></input><br>
+    <input type="radio" name="owner[owner_ids][]" id="<%= o.id %>" value="<%= o.id %>"><%= o.name %>" <%='checked' if @pet.owner.name == owner.name? %>>
+    <%= owner.name %>
+    </input>
+    <br>
      
     <% end %>
     <br>
